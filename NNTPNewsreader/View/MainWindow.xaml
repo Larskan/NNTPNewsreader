@@ -1,0 +1,68 @@
+﻿<Window x:Class="NNTPNewsreader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NNTPNewsreader"
+        mc:Ignorable="d"
+        Title="News Reader" Height="450" Width="1000">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Background="Cyan">
+            <Button x:Name="InfoButton" Click="onInfoClick" Margin="5 0 5 0" Width="50" Content="Info"></Button>
+            <Button x:Name="GetNewsgroupsButton" Click="onGetNewsgroupsClick" Margin="5 0 5 0" Width="120" Content="Grab Newsgroups"></Button>
+            <Button x:Name="GetArticlesButton" Click="onGetArticlesClick" Margin="5 0 5 0" Width="100" Content="Grab Articles"></Button>
+            <Button x:Name="ReadArticleButton" Click="onGetArticleClick" Margin="5 0 5 0" Width="100" Content="Read Article"></Button>
+            <Button x:Name="UploadArticleButton" Click="onUploadArticleClick" Margin="5 0 5 0" Width="100" Content="Upload Article"></Button>
+            <TextBox x:Name="SearchBox" Margin="5 0 5 0" Width="200" Height="20"></TextBox>
+            <Button x:Name="SearchButton" Margin="5 0 5 0" Width="70" Height="30" Content="Search" Click="onSearchClick"></Button>
+        </StackPanel>
+
+        <Grid Grid.Column="1" Grid.Row="2" Background="Cyan">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+           
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <ListView x:Name="ListNewsgroup" Grid.Column="0" ItemsSource="{Binding Newsgroups}" SelectionMode="Single" Background="CornflowerBlue" Foreground="Black">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Newsgroups" DisplayMemberBinding="{Binding GroupName}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <ListView x:Name="ListArticles" Grid.Column="1" ItemsSource="{Binding Articles}" SelectionMode="Single" Background="CornflowerBlue" Foreground="Black">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Subjects" DisplayMemberBinding="{Binding Subject}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

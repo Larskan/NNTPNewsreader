@@ -1,0 +1,35 @@
+﻿<Window x:Class="NNTPNewsreader.View.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NNTPNewsreader.View"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="400">
+
+    <StackPanel Orientation="Vertical">
+        <Separator Background="Transparent" Height="20"></Separator>
+        <TextBlock HorizontalAlignment="Center" FontSize="28" Text="Login to Newsgroup"></TextBlock>
+        <Separator Background="Transparent" Height="20"></Separator>
+
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Margin="10 0 0 0" VerticalAlignment="Top">
+                <TextBlock HorizontalAlignment="Right" Text="News Server"></TextBlock>
+                <Separator Background="Transparent" Height="10"></Separator>
+                <TextBlock HorizontalAlignment="Right" Text="User"></TextBlock>
+                <Separator Background="Transparent" Height="10"></Separator>
+                <TextBlock HorizontalAlignment="Right" Text="Pass"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="20 0 0 0" VerticalAlignment="Top">
+                <TextBox HorizontalAlignment="Left" Width="200" Text="{Binding Server}"></TextBox>
+                <Separator Background="Transparent" Height="10"></Separator>
+                <TextBox HorizontalAlignment="Left" Width="200" Text="{Binding User}"></TextBox>
+                <Separator Background="Transparent" Height="10"></Separator>
+                <TextBox HorizontalAlignment="Left" Width="200" Text="{Binding Pass}"></TextBox>
+                <Separator Background="Transparent" Height="10"></Separator>
+                <Button Width="50" Click="onLoginClick" Content="Enter"></Button>
+
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>

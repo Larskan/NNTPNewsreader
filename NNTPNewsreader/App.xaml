@@ -1,0 +1,31 @@
+﻿<Application x:Class="NNTPNewsreader.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NNTPNewsreader"
+             StartupUri="View/Login.xaml">
+    <Application.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Blue"/>
+            <Setter Property="Foreground" Value="Cyan"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter TextElement.Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="Black" TargetName="Border"/>
+                                <Setter Property="BorderThickness" Value="2" TargetName="Border"/>
+                                <Setter Property="CornerRadius" Value="5" TargetName="Border"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+         
+    </Application.Resources>
+</Application>
