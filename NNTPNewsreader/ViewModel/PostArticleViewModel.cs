@@ -13,9 +13,11 @@ namespace NNTPNewsreader.ViewModel
         private string body;
         private string chosenGroup;
 
+        #region getters and setters
         public string Subject { get { return subject; } set { subject = value; propertyIsChanged(); } }
         public string Body { get { return body; } set { body = value; propertyIsChanged(); } }
         public string ChosenGroup { get { return chosenGroup; } set { chosenGroup = value; propertyIsChanged(); } }
+        #endregion
 
         public PostArticleViewModel(string group)
         {

@@ -43,8 +43,8 @@ namespace NNTPNewsreader.Model
         /// <summary>
         /// Checks if our login details are correct
         /// </summary>
-        /// <param name="user"></param> lars16n6@easv365.dk
-        /// <param name="pass"></param> 528a61
+        /// <param name="user"></param> Username
+        /// <param name="pass"></param> Password
         public static void Authenticate(string user, string pass)
         {
             StreamWriter sw = new StreamWriter(stream);
@@ -197,7 +197,7 @@ namespace NNTPNewsreader.Model
         /// </summary>
         /// <param name="ng"></param> Newsgroup: dk.test
         /// <param name="subject"></param> Subject
-        /// <param name="from"></param> From = lars16n6@easv365.dk
+        /// <param name="from"></param> From = Lars's mail
         /// <param name="body"></param> What the article contains
         /// <returns></returns>
         /// <exception cref="InvalidDataException"></exception>
@@ -214,7 +214,7 @@ namespace NNTPNewsreader.Model
 
             sw.Write("from: " + from + "\r\n");
             sw.Write("subject: " + subject + "\r\n");
-            sw.Write("Newsgroups: " + "dk.test" + "\r\n");
+            sw.Write("Newsgroups: " + "dk.test" + "\r\n"); //Forceful Newsgroup rather than a random one, would be 'ng' otherwise
             sw.Write("\r\n");
             sw.Write(body);
             sw.Write("\r\n.\r\n"); //Cant end without the dot

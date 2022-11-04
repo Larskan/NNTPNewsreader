@@ -16,6 +16,7 @@ namespace NNTPNewsreader.ViewModel
         private ObservableCollection<Articles>? _articles;
         private Articles? _articleVar;
 
+        #region Getters and Setters
         public ObservableCollection<Newsgroup> Newsgroups
         {
             get { return _newsGroups; }
@@ -33,6 +34,7 @@ namespace NNTPNewsreader.ViewModel
             get { return _articleVar; }
             set { _articleVar = value; propertyIsChanged(); }
         }
+        #endregion
 
         public MainWindowViewModel()
         {

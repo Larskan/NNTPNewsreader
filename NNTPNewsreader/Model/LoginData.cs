@@ -19,8 +19,8 @@ namespace NNTPNewsreader.Model
         /// Basically what is needed to login
         /// </summary>
         /// <param name="server"></param> news.sunsite.dk
-        /// <param name="username"></param> mine is: lars16n6@easv365.dk
-        /// <param name="password"></param> mine is: 528a61
+        /// <param name="username"></param> mine is: XXXXX@easv365.dk
+        /// <param name="password"></param> mine is: ?????
         public LoginData(string server, string username, string password)
         {
             Server = server;

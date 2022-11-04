@@ -111,7 +111,7 @@ namespace NNTPNewsreader
             //foreach (ListViewItem lvi in ListNewsgroup.Items)
                 if (ng.Equals(SearchBox.Text))
                 {
-                    
+                    //brrrr
 
                 }
               

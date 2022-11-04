@@ -27,7 +27,6 @@ namespace NNTPNewsreader.View
             viewModel = new(group);
             this.DataContext = viewModel; //Makes sure that the PostArticleViewModel is used in this datacontext
 
-            //Closing += (o, e) => { onClose(); };
         }
 
         private void onPostClick(object sender, RoutedEventArgs e)
