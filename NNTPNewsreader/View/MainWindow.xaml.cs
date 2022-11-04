@@ -75,6 +75,7 @@ namespace NNTPNewsreader
             viewModel.PostArticleWindow(ng); //Launches the PostArticle.xaml
         }
 
+        //Attempt with search
         private bool find(string str)
         {
             foreach (ListViewItem item in ListNewsgroup.Items)
@@ -84,6 +85,7 @@ namespace NNTPNewsreader
             }
             return false;
         }
+        //Attempt with search
         private void select(string str)
         {
             foreach(ListViewItem item in ListNewsgroup.Items)

@@ -8,6 +8,7 @@ namespace NNTPNewsreader.Model
 {
     public class Newsgroup
     {
+
         //Example of group: 211 890 150694 151583 dk.test | Code articleTotal articleFirst articleLast groupName
         private string? _groupName;
         private int _articleTotal;

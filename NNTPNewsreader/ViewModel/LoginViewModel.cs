@@ -13,10 +13,11 @@ namespace NNTPNewsreader.ViewModel
         private string user;
         private string pass;
 
-
+        #region Getter and Setters
         public string Server { get { return server; } set { server = value; propertyIsChanged(); } }
         public string User { get { return user; } set { user = value; propertyIsChanged(); } }
         public string Pass { get { return pass; } set { pass = value; propertyIsChanged(); } }
+        #endregion
 
         /// <summary>
         /// Grabs the data used in the Login Screen to connect to the News Server
